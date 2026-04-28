@@ -1,0 +1,23 @@
+{
+  "name": "alchemy-final",
+  "version": "1.0.0",
+  "description": "Plataforma de encuestas pagadas on-chain — Alchemy University Ethereum Bootcamp",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network hardhat",
+    "deploy:basesepolia": "npx hardhat run scripts/deploy.ts --network baseSepolia"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^20.12.7",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
