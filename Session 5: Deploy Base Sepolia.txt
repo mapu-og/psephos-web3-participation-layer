@@ -1,0 +1,8 @@
+Sí, la sesión 5 está completa:
+
+1. **Script creado** — scripts/deploy.ts
+2. **Contrato deployado** en Base Sepolia — `0x5caba1c7e5caB1651FFF75Fc335010b92A75bE9b`
+3. **Verificado** en Sourcify (full match) — código fuente público y legible
+4. **hardhat.config.ts** actualizado con Sourcify, Etherscan config y custom chain para Base Sepolia
+
+La única cosa pendiente opcional sería agregar `BASESCAN_API_KEY` al `.env` (y a `.env.example`) si quieres que también aparezca verificado en basescan.org. ¿Lo agregamos?
