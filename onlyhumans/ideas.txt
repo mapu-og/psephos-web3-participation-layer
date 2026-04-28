@@ -1,0 +1,3 @@
+Alchemy project
+    Ideas:
+        1. SliptWise Web3

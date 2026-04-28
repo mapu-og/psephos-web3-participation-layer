@@ -1,0 +1,19 @@
+{
+    "name": "Jesus AK-47 (Optimized)",
+    "description": "A powerful and symbolic artistic representation, optimized for digital wallets.",
+    "image": "ipfs://bafybeids3gbzgjgmcfsufi7f3zlawlhy2geeelccyle7vexsn7zuaxvc3e",
+    "attributes": [
+        {
+            "trait_type": "Character",
+            "value": "Jesus"
+        },
+        {
+            "trait_type": "Protector",
+            "value": "AK-47"
+        },
+        {
+            "trait_type": "Optimized",
+            "value": "Yes"
+        }
+    ]
+}

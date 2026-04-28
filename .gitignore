@@ -1,0 +1,14 @@
+node_modules/
+artifacts/
+cache/
+coverage/
+.env
+*.log
+*.tmp
+.vscode/
+*.pem
+*.key
+*.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
