@@ -1,7 +1,9 @@
-import { ethers } from "hardhat";
-
-const CONTRACT_ADDRESS = "0x6f48677A356F2e1Bce0910867f69299f89fB56b3";
+import { ethers, network } from "hardhat";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { readDeploymentInfo } from "./lib/deployment";
 const PINATA_API_URL = "https://api.pinata.cloud/pinning/pinJSONToIPFS";
+const FRONTEND_ENV_PATH = path.resolve(__dirname, "..", "frontend", ".env.local");
 
 type SurveyKind = "survey" | "poll" | "vote";
 
@@ -91,18 +93,43 @@ type PinataPinResponse = {
 
 function getPinataJwt(): string {
   const jwt = process.env.IPFS_PINATA_JWT?.trim();
-  if (!jwt) {
-    throw new Error("Missing IPFS_PINATA_JWT in .env. The seed script now uploads real metadata to IPFS.");
+  if (jwt) {
+    return jwt;
   }
-  return jwt;
+
+  throw new Error(
+    "Missing IPFS_PINATA_JWT in environment. Set it in psephos/.env or psephos/frontend/.env.local."
+  );
+}
+
+async function getPinataJwtOrFallback(): Promise<string> {
+  const envJwt = process.env.IPFS_PINATA_JWT?.trim();
+  if (envJwt) {
+    return envJwt;
+  }
+
+  try {
+    const frontendEnv = await readFile(FRONTEND_ENV_PATH, "utf8");
+    const match = frontendEnv.match(/^IPFS_PINATA_JWT=(.+)$/m);
+    const fileJwt = match?.[1]?.trim();
+
+    if (fileJwt) {
+      return fileJwt;
+    }
+  } catch {
+    // Ignore missing frontend env files and fall through to the standard error.
+  }
+
+  return getPinataJwt();
 }
 
 async function pinJsonToIpfs(name: string, content: SurveyMetadataV1): Promise<string> {
+  const jwt = await getPinataJwtOrFallback();
   const response = await fetch(PINATA_API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${getPinataJwt()}`,
+      Authorization: `Bearer ${jwt}`,
     },
     body: JSON.stringify({
       pinataMetadata: { name },
@@ -130,7 +157,12 @@ async function main() {
   const balance = await ethers.provider.getBalance(signer.address);
   console.log("Balance      :", ethers.formatEther(balance), "ETH\n");
 
-  const contract = await ethers.getContractAt("SurveyPlatform", CONTRACT_ADDRESS);
+  const deployment = await readDeploymentInfo(network.name);
+  console.log("Target network:", deployment.network);
+  console.log("Contract      :", deployment.contractAddress);
+  console.log("Deploy block  :", deployment.deploymentBlock, "\n");
+
+  const contract = await ethers.getContractAt("SurveyPlatform", deployment.contractAddress);
 
   const nowBlock = await ethers.provider.getBlock("latest");
   if (!nowBlock) throw new Error("Could not fetch latest block");

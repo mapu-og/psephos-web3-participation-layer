@@ -1,6 +1,9 @@
-export const CONTRACT_ADDRESS =
-  "0x6f48677A356F2e1Bce0910867f69299f89fB56b3" as const;
-export const CONTRACT_DEPLOYMENT_BLOCK = BigInt(40425801);
+import {
+  CONTRACT_ADDRESS,
+  CONTRACT_DEPLOYMENT_BLOCK,
+} from "./contract-meta";
+
+export { CONTRACT_ADDRESS, CONTRACT_DEPLOYMENT_BLOCK };
 
 export const SURVEY_PLATFORM_ABI = [
   // ── Constructor ──

@@ -14,7 +14,8 @@ Short summary:
 ## Current deployment
 
 - Network: Base Sepolia
-- Contract address: `0x6f48677A356F2e1Bce0910867f69299f89fB56b3`
+- Contract address: `0x14d69D3A89c1197b16632658A31dF1624f7971D3`
+- Deployment block: `40856378`
 - Live project URL: pending final Vercel production deployment
 
 ## Quick start
