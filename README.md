@@ -1,6 +1,6 @@
+
 <p align="center">
-  <span style="color:#00E5CC;font-size:48px;font-weight:700;text-shadow:0 0 12px rgba(0,229,204,0.55), 0 0 28px rgba(0,229,204,0.25);vertical-align:middle;">ψ</span>
-  <span style="color:#F5F6FA;font-size:38px;font-weight:700;letter-spacing:0.04em;vertical-align:middle;margin-left:10px;">Psephos</span>
+  <img src="assets/psephos-logo-title.svg" alt="Psephos logo and title" width="320" />
   <br />
   <img src="assets/by-mapuritelabs.svg" alt="by MapuriteLabs" height="18" />
 </p>
