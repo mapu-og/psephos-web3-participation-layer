@@ -2,7 +2,7 @@
   <rect width="320" height="100" fill="none"/>
   <text x="40" y="60" font-size="56" font-family="Segoe UI, Arial, sans-serif" font-weight="bold" fill="#00E5CC" filter="url(#glow)">ψ</text>
   <text x="90" y="60" font-size="44" font-family="Segoe UI, Arial, sans-serif" font-weight="bold" fill="#F5F6FA">Psephos</text>
-  <text x="310" y="92" font-size="15" font-family="Segoe UI, Arial, sans-serif" fill="#00E5CC" text-anchor="end">by MapuriteLabs</text>
+  <text x="310" y="92" font-size="15" font-family="Segoe UI, Arial, sans-serif" fill="#3ABEFF" text-anchor="end">by MapuriteLabs</text>
   <defs>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
