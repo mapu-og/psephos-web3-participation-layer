@@ -1,0 +1,10 @@
+<svg width="212" height="28" viewBox="0 0 212 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mapuriteGradient" x1="52" y1="4" x2="176" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00E5CC"/>
+      <stop offset="1" stop-color="#7B7EFF"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="19" fill="#8B8FA3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="400">by</text>
+  <text x="28" y="19" fill="url(#mapuriteGradient)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="0.2">MapuriteLabs</text>
+</svg>
