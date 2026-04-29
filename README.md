@@ -16,7 +16,7 @@ Short summary:
 - Network: Base Sepolia
 - Contract address: `0x14d69D3A89c1197b16632658A31dF1624f7971D3`
 - Deployment block: `40856378`
-- Live project URL: pending final Vercel production deployment
+- Live project URL: `https://psephos-web3.vercel.app`
 
 ## Quick start
 
