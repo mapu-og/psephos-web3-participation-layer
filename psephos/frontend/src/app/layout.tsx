@@ -6,11 +6,11 @@ import { MeanderBorder } from "@/components/MeanderBorder";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Psephos — Decentralized Survey Infrastructure",
-  description: "Create and answer paid surveys on Base. Votes as immutable as stone.",
+  title: "Psephos — Web3 Participation Layer",
+  description: "Web3 participation layer for on-chain surveys, polls, and votes on Base.",
   openGraph: {
     title: "Psephos",
-    description: "Decentralized survey infrastructure on Base",
+    description: "Web3 participation layer for on-chain surveys, polls, and votes on Base.",
     type: "website",
   },
   icons: { icon: "/favicon.svg" },
