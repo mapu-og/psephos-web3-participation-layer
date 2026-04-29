@@ -1,15 +1,31 @@
+<p align="center">
+  <img src="psephos/frontend/public/favicon.svg" alt="Psephos logo" width="84" />
+</p>
+
 # Psephos
+
+<p align="center">
+  <a href="https://psephos-web3.vercel.app/">Live App</a>
+  ·
+  <a href="mailto:mapu.kushy@gmail.com">Contact</a>
+</p>
+
+<p align="center">
+  <img alt="MapuriteLabs" src="https://img.shields.io/badge/MapuriteLabs-00E5CC?style=for-the-badge&labelColor=1A1D27" />
+</p>
 
 Psephos is a Web3 participation layer for on-chain surveys, polls, and votes. Smart contract state and reward logic live on Base Sepolia, giving the platform transparent, auditable, and tamper-resistant behavior, while IPFS is used to store survey metadata and response payloads as verifiable content-addressed records. This architecture makes participation flows more immutable, traceable, and trustworthy than a traditional Web2 form system.
 
-Live app: `https://psephos-web3.vercel.app/`
+Live app: [https://psephos-web3.vercel.app/](https://psephos-web3.vercel.app/)
 
 ## Live App
 
-- Live URL: `https://psephos-web3.vercel.app`
+- Live URL: [https://psephos-web3.vercel.app](https://psephos-web3.vercel.app)
 - Network: `Base Sepolia`
 - Contract address: `0x14d69D3A89c1197b16632658A31dF1624f7971D3`
 - Deployment block: `40856378`
+- Built by: `MapuriteLabs`
+- Contact: [mapu.kushy@gmail.com](mailto:mapu.kushy@gmail.com)
 
 ## What Psephos Does
 
@@ -57,7 +73,7 @@ Prerequisites:
 
 If you want to test the live app or run transactions on Base Sepolia, your wallet needs testnet ETH. One example faucet is:
 
-- `https://console.optimism.io/faucet`
+- [https://console.optimism.io/faucet](https://console.optimism.io/faucet)
 
 Backend and contract workspace:
 
