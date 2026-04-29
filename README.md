@@ -1,8 +1,6 @@
 
 <p align="center">
   <img src="assets/psephos-logo-title.svg" alt="Psephos logo and title" width="320" />
-  <br />
-  <img src="assets/by-mapuritelabs.svg" alt="by MapuriteLabs" height="18" />
 </p>
 
 <p align="center">
