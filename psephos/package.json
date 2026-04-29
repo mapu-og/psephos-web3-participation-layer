@@ -6,7 +6,8 @@
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "deploy:local": "npx hardhat run scripts/deploy.ts --network hardhat",
-    "deploy:basesepolia": "npx hardhat run scripts/deploy.ts --network baseSepolia"
+    "deploy:basesepolia": "npx hardhat run scripts/deploy.ts --network baseSepolia",
+    "seed:basesepolia": "npx hardhat run scripts/seed.ts --network baseSepolia"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.0",

@@ -1,1 +1,0 @@
-## Estructura estándar para Bootcamp

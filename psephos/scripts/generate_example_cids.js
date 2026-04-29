@@ -1,68 +1,77 @@
-// Script utilitario para subir metadata de ejemplo a IPFS vía el endpoint local de Next.js
-// Ejecuta este script ANTES de correr seed.ts y reemplaza los CIDs en seed.ts con los que imprime este script
+// Preview the exact seed metadata payloads and upload them through the local Next.js API.
+// Useful for manual verification before running `npm run seed:basesepolia`.
 
-const fetch = require('node-fetch');
-const fs = require('fs');
-
-const ENDPOINT = 'http://localhost:3000/api/ipfs/survey-metadata';
+const ENDPOINT = "http://localhost:3000/api/ipfs/survey-metadata";
 
 const examples = [
   {
-    name: 'survey',
+    name: "survey",
     payload: {
       version: 1,
-      kind: 'survey',
-      question: "What's your favorite L2?",
-      description: "Share your favorite Layer 2 scaling solution.",
-      responseMode: 'open-text',
+      kind: "survey",
+      question: "What would improve your Web3 onboarding experience?",
+      description:
+        "Share one concrete change that would make a Web3 product easier to understand, trust, or use.",
+      responseMode: "open-text",
       allowBlankVote: false,
     },
   },
   {
-    name: 'poll',
+    name: "poll",
     payload: {
       version: 1,
-      kind: 'poll',
-      question: 'DeFi vs CeFi - Your take?',
-      description: 'Choose your preferred financial system.',
+      kind: "poll",
+      question: "Which Layer 2 do you use most often?",
+      description: "Choose the Layer 2 you use most frequently right now.",
       options: [
-        { id: 'defi', label: 'DeFi' },
-        { id: 'cefi', label: 'CeFi' },
+        { id: "base", label: "Base" },
+        { id: "arbitrum", label: "Arbitrum" },
+        { id: "optimism", label: "Optimism" },
       ],
-      responseMode: 'single-choice',
+      responseMode: "single-choice",
       allowBlankVote: false,
     },
   },
   {
-    name: 'vote',
+    name: "vote",
     payload: {
       version: 1,
-      kind: 'vote',
-      question: 'Rate your Web3 experience',
-      description: 'How would you rate your experience with Web3?',
+      kind: "vote",
+      question: "Which feature should Psephos prioritize next?",
+      description: "Vote on the next product priority for the platform roadmap.",
       options: [
-        { id: 'good', label: 'Good' },
-        { id: 'average', label: 'Average' },
-        { id: 'bad', label: 'Bad' },
+        { id: "private-responses", label: "Private responses" },
+        { id: "token-gated-voting", label: "Token-gated voting" },
+        { id: "creator-analytics", label: "Creator analytics" },
+        { id: "blank-vote", label: "Blank Vote" },
       ],
-      responseMode: 'single-choice',
+      responseMode: "single-choice",
       allowBlankVote: true,
     },
   },
 ];
 
 (async () => {
-  for (const ex of examples) {
-    const res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(ex.payload),
-    });
-    const data = await res.json();
-    if (data.cid) {
-      console.log(`${ex.name} CID:`, data.cid);
-    } else {
-      console.error(`${ex.name} ERROR:`, data);
+  for (const example of examples) {
+    console.log(`\n=== ${example.name.toUpperCase()} PAYLOAD ===`);
+    console.log(JSON.stringify(example.payload, null, 2));
+
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(example.payload),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.cid) {
+        console.log(`${example.name} CID: ${data.cid}`);
+      } else {
+        console.error(`${example.name} ERROR:`, data);
+      }
+    } catch (error) {
+      console.error(`${example.name} NETWORK ERROR:`, error.message);
     }
   }
 })();
