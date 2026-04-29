@@ -1,17 +1,14 @@
 <p align="center">
-  <img src="psephos/frontend/public/favicon.svg" alt="Psephos logo" width="84" />
+  <span style="color:#00E5CC;font-size:48px;font-weight:700;text-shadow:0 0 12px rgba(0,229,204,0.55), 0 0 28px rgba(0,229,204,0.25);vertical-align:middle;">ψ</span>
+  <span style="color:#F5F6FA;font-size:38px;font-weight:700;letter-spacing:0.04em;vertical-align:middle;margin-left:10px;">Psephos</span>
+  <br />
+  <img src="assets/by-mapuritelabs.svg" alt="by MapuriteLabs" height="18" />
 </p>
-
-# Psephos
 
 <p align="center">
   <a href="https://psephos-web3.vercel.app/">Live App</a>
   ·
   <a href="mailto:mapu.kushy@gmail.com">Contact</a>
-</p>
-
-<p align="center">
-  <img alt="MapuriteLabs" src="https://img.shields.io/badge/MapuriteLabs-00E5CC?style=for-the-badge&labelColor=1A1D27" />
 </p>
 
 Psephos is a Web3 participation layer for on-chain surveys, polls, and votes. Smart contract state and reward logic live on Base Sepolia, giving the platform transparent, auditable, and tamper-resistant behavior, while IPFS is used to store survey metadata and response payloads as verifiable content-addressed records. This architecture makes participation flows more immutable, traceable, and trustworthy than a traditional Web2 form system.
