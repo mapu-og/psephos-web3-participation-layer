@@ -1,6 +1,8 @@
 # Psephos
 
-Psephos is a Web3 participation layer for on-chain surveys, polls, and votes. Creators publish questions funded with ETH rewards, participants respond through a wallet-connected frontend, metadata is stored on IPFS, and rewards are claimed on-chain on Base Sepolia.
+Psephos is a Web3 participation layer for on-chain surveys, polls, and votes. Smart contract state and reward logic live on Base Sepolia, giving the platform transparent, auditable, and tamper-resistant behavior, while IPFS is used to store survey metadata and response payloads as verifiable content-addressed records. This architecture makes participation flows more immutable, traceable, and trustworthy than a traditional Web2 form system.
+
+Live app: `https://psephos-web3.vercel.app/`
 
 ## Live App
 
