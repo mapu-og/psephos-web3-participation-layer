@@ -30,6 +30,7 @@ dist/
 *.tgz
 Figma/
 screenshots_test/
+presentation/
 presentation_example/
 onlyhumans/
 certification/
