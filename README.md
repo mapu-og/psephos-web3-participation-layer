@@ -11,11 +11,11 @@
 
 Psephos is a Web3 participation layer for on-chain surveys, polls, and votes. Smart contract state and reward logic live on Base Sepolia, giving the platform transparent, auditable, and tamper-resistant behavior, while IPFS is used to store survey metadata and response payloads as verifiable content-addressed records. This architecture makes participation flows more immutable, traceable, and trustworthy than a traditional Web2 form system.
 
-Live app: [https://psephos-web3.vercel.app/](https://demo.psephos.vote/)
+Live app: [https://demo.psephos.vote/](https://demo.psephos.vote/)
 
 ## Live App
 
-- Live URL: [https://psephos-web3.vercel.app](https://demo.psephos.vote/)
+- Live URL: [https://demo.psephos.vote/](https://demo.psephos.vote/)
 - Network: `Base Sepolia`
 - Contract address: `0x14d69D3A89c1197b16632658A31dF1624f7971D3`
 - Deployment block: `40856378`
