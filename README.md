@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <a href="https://psephos-web3.vercel.app/">Live App</a>
+  <a href="https://demo.psephos.vote/">Live App</a>
   ·
   <a href="mailto:mapu.kushy@gmail.com">Contact</a>
 </p>
